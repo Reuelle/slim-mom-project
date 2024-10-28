@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { RotatingLines } from 'react-loader-spinner';
 import 'react-toastify/dist/ReactToastify.css';
 
-axios.defaults.baseURL = 'https://slim-mom-fullstack.onrender.com';
+axios.defaults.baseURL = 'https://slim-mom-project.onrender.com';
 
 export const RegistrationForm = () => {
   // State to manage form inputs

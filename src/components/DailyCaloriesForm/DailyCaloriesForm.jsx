@@ -6,7 +6,7 @@ import { Modal } from '../Modal/Modal';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-axios.defaults.baseURL = 'https://slim-mom-fullstack.onrender.com';
+axios.defaults.baseURL = 'https://slim-mom-project.onrender.com';
 
 export const DailyCaloriesForm = ({ isLoggedIn }) => {
   const [height, setHeight] = useState('');

@@ -3,7 +3,7 @@ import styles from './DiaryAddProductForm.module.css';
 import axios from 'axios';
 import AddButtonIcon from '../images/AddButton.png';
 
-axios.defaults.baseURL = 'https://slim-mom-fullstack.onrender.com';
+axios.defaults.baseURL = 'https://slim-mom-project.onrender.com';
 
 export const DiaryAddProductForm = ({ selectedDate }) => {
   // State to manage form inputs
