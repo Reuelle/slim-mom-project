@@ -40,13 +40,12 @@ export const App = () => {
           }
         >
           <Routes>
-            <Route path="/" element={<SharedLayout isLoggedIn={isLoggedIn} onLogout={handleLogout} />}>
-              <Route path="/" element={<RestrictedRoute redirectTo="/calculator"><HomePage /></RestrictedRoute>} />
-              <Route path="/register" element={<RestrictedRoute redirectTo="/calculator"><RegistrationPage /></RestrictedRoute>} />
-              <Route path="/login" element={<RestrictedRoute redirectTo="/calculator"><LoginPage onLogin={handleLogin} /></RestrictedRoute>} />
-              <Route path="/diary" element={<PrivateRoute redirectTo="/login"><DiaryPage /></PrivateRoute>} />
-              <Route path="/calculator" element={<PrivateRoute redirectTo="/login"><CalculatorPage /></PrivateRoute>} />
-            </Route>
+  <Route path="/" element={<SharedLayout isLoggedIn={isLoggedIn} onLogout={handleLogout} />}>
+    <Route path="/" element={<HomePage />} /> {/* Remove RestrictedRoute for testing */}
+    <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
+  </Route>
+</Routes>
+            
           </Routes>
         </Suspense>
       </div>
