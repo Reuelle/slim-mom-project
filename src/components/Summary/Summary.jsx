@@ -3,7 +3,7 @@ import axios from 'axios';
 import style from './summary.module.css';
 import { RotatingLines } from 'react-loader-spinner';
 
-axios.defaults.baseURL = 'https://slim-mom-fullstack.onrender.com';
+axios.defaults.baseURL = 'https://slim-mom-project.onrender.com';
 
 export const Summary = ({ selectedDate }) => {
   const [userData, setUserData] = useState(null);
