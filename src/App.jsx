@@ -26,18 +26,29 @@ export const App = () => {
   return (
     <Router basename="/slim-mom-project"> {/* Add basename */}
       <div style={{ height: '100vh', overflowY: 'scroll', overflowX: 'hidden' }}>
-        <Suspense fallback={<div>Loading...</div>}>
-  <Routes>
-    <Route
-      path="/"
-      element={<SharedLayout isLoggedIn={isLoggedIn} onLogout={handleLogout} />}
-    >
-      <Route path="/" element={<HomePage />} />
-      <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
-    </Route>
-  </Routes>
-</Suspense>
-
+        <Suspense
+          fallback={
+            <RotatingLines
+              visible={true}
+              height="24"
+              width="24"
+              color="white"
+              strokeWidth="5"
+              animationDuration="0.75"
+              ariaLabel="rotating-lines-loading"
+            />
+          }
+        >
+          <Routes>
+            <Route path="/" element={<SharedLayout isLoggedIn={isLoggedIn} onLogout={handleLogout} />}>
+              <Route path="/" element={<RestrictedRoute redirectTo="/calculator"><HomePage /></RestrictedRoute>} />
+              <Route path="/register" element={<RestrictedRoute redirectTo="/calculator"><RegistrationPage /></RestrictedRoute>} />
+              <Route path="/login" element={<RestrictedRoute redirectTo="/calculator"><LoginPage onLogin={handleLogin} /></RestrictedRoute>} />
+              <Route path="/diary" element={<PrivateRoute redirectTo="/login"><DiaryPage /></PrivateRoute>} />
+              <Route path="/calculator" element={<PrivateRoute redirectTo="/login"><CalculatorPage /></PrivateRoute>} />
+            </Route>
+          </Routes>
+        </Suspense>
       </div>
     </Router>
   );
