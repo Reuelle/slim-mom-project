@@ -7,7 +7,7 @@ import axios from 'axios';
 import { RotatingLines } from 'react-loader-spinner';
 import backBtn from '../../assets/images/backBtn.svg';
 
-axios.defaults.baseURL = 'https://slim-mom-fullstack.onrender.com';
+axios.defaults.baseURL = 'https://slim-mom-project.onrender.com';
 
 export default function Navigation({ isLoggedIn, onLogout }) {
   const [userData, setUserData] = useState('');
