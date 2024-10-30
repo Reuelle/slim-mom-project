@@ -2,7 +2,7 @@
   "name": "slim-mom-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Reuelle.github.io/slim-mom-project",
+  "homepage": "https://Reuelle.github.io/slim-mom-fullstack",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.8",
     "@testing-library/jest-dom": "^5.16.3",
