@@ -1,8 +1,8 @@
 {
-  "name": "slim-mom-fullstack",
+  "name": "slim-mom-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Reuelle.github.io/slim-mom-fullstack/",
+  "homepage": "https://Reuelle.github.io/slim-mom-project/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.8",
     "@testing-library/jest-dom": "^5.16.3",
@@ -65,5 +65,10 @@
   },
   "devDependencies": {
     "concurrently": "^9.0.1"
-  }
+  },
+  "description": "Acest proiect a fost creat cu ajutorul\r [Create React App](https://github.com/facebook/create-react-app). Pentru prezentări\r și configurarea de funcții suplimentare\r [consultă documentația](https://facebook.github.io/create-react-app/docs/getting-started).",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
