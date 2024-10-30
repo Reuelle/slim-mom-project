@@ -66,7 +66,7 @@ const DiaryProductsList = ({ selectedDate }) => {
     setIsLoadingDeletedProd(true);
     try {
       const response = await fetch(
-        `https://slim-mom-fullstack.onrender.com/api/products/deleteConsumedProduct/${productId}`,
+        `https://slim-mom-project.onrender.com/api/products/deleteConsumedProduct/${productId}`,
         {
           method: 'DELETE',
           headers: {
