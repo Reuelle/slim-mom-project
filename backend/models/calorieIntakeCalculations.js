@@ -18,7 +18,7 @@ const calorieIntakeCalculationsSchema = new Schema({
     bloodType: {
         type: Number,
         required: true,
-        enum: [A, AB, O, O+], // Restrict to valid blood type values
+        enum: [1, 2, 3, 4], // Restrict to valid blood type values
     },
     currentWeight: {
         type: Number,
